@@ -199,10 +199,10 @@ public class Utils {
 		 int yy=0;
 		
 		// BEGIN BAD CODE
-		//Random rand = new Random();
+		Random rand = new Random();
 		// END BAD CODE */
 		// BEGIN GOOD CODE 
-		SecureRandom rand = generateRandom(new String[]{});
+		//SecureRandom rand = generateRandom(new String[]{});
 		// END GOOD CODE */
 		int days_1 = 60 * 60 * 24;
 		int months_1 = days_1 * 31;
