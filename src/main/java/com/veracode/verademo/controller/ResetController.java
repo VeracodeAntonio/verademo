@@ -26,6 +26,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.SecureRandom;
+import java.security.SecureRandomSpi;
 
 @Controller
 @Scope("request")
@@ -88,7 +90,8 @@ public class ResetController {
 		PreparedStatement commentsStatement = null;
 		java.util.Date now = new java.util.Date();
 
-		Random rand = new Random();
+		//Random rand = new Random();
+		SecureRandom rand = new SecureRandom();
 
 		// Drop existing tables and recreate from schema file
 		recreateDatabaseSchema();
