@@ -311,10 +311,10 @@ public class UserController {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection connect = DriverManager.getConnection(Constants.create().getJdbcConnectionString());
 
-			// mal String sql = "SELECT username FROM users WHERE username = '" + username + "'";
+			//mal String sql = "SELECT username FROM users WHERE username = '" + username + "'";
 			String sql = "SELECT username FROM users WHERE username = ? ";
-			// mal Statement statement = connect.createStatement();
-			// mal ResultSet result = statement.executeQuery(sql);
+			//mal Statement statement = connect.createStatement();
+			//mal ResultSet result = statement.executeQuery(sql);
 			PreparedStatement statement = connect.prepareStatement(sql);
 			ResultSet result = statement.executeQuery();
 			if (result.first()) {
