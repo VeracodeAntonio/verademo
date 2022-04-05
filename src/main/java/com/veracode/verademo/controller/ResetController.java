@@ -36,7 +36,6 @@ public class ResetController {
 
 	@Autowired
 	ServletContext context;
-
 	private static User[] users = new User[] {
 			User.create("admin", "admin", "Thats Mr Administrator to you."),
 			User.create("john", "John", "John Smith"),
